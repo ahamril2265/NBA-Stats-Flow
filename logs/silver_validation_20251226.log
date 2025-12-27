@@ -1,0 +1,42 @@
+2025-12-26 17:37:54,172 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-26
+2025-12-26 17:37:54,231 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-26 17:37:54,289 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-26 17:37:54,331 | INFO | SILVER_VALIDATION | Rows after deduplication: 174762 (dropped 25238)
+2025-12-26 17:37:54,406 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-26 17:37:54,406 | INFO | SILVER_VALIDATION | Final silver row count: 174762
+2025-12-26 17:37:54,407 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-26/nba_player_stats_silver.parquet
+2025-12-26 17:38:10,400 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-26
+2025-12-26 17:38:10,621 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-26 17:38:10,663 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-26 17:38:10,699 | INFO | SILVER_VALIDATION | Rows after deduplication: 174762 (dropped 25238)
+2025-12-26 17:38:10,952 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-26 17:38:10,953 | INFO | SILVER_VALIDATION | Final silver row count: 174762
+2025-12-26 17:38:10,953 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-26/nba_player_stats_silver.csv
+2025-12-26 17:50:00,461 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-26
+2025-12-26 17:50:00,627 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-26 17:50:00,669 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-26 17:50:00,696 | INFO | SILVER_VALIDATION | Rows after deduplication: 174762 (dropped 25238)
+2025-12-26 17:50:00,903 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-26 17:50:00,903 | INFO | SILVER_VALIDATION | Final silver row count: 174762
+2025-12-26 17:50:00,903 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-26/nba_player_stats_silver.csv
+2025-12-26 17:50:04,532 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-26
+2025-12-26 17:50:04,585 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-26 17:50:04,629 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-26 17:50:04,672 | INFO | SILVER_VALIDATION | Rows after deduplication: 174762 (dropped 25238)
+2025-12-26 17:50:04,739 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-26 17:50:04,739 | INFO | SILVER_VALIDATION | Final silver row count: 174762
+2025-12-26 17:50:04,740 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-26/nba_player_stats_silver.parquet
+2025-12-26 17:50:51,460 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-26
+2025-12-26 17:50:51,678 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-26 17:50:51,734 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-26 17:50:51,776 | INFO | SILVER_VALIDATION | Rows after deduplication: 174762 (dropped 25238)
+2025-12-26 17:50:52,087 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-26 17:50:52,087 | INFO | SILVER_VALIDATION | Final silver row count: 174762
+2025-12-26 17:50:52,088 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-26/nba_player_stats_silver.csv
+2025-12-26 17:51:38,684 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-26
+2025-12-26 17:51:38,861 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-26 17:51:38,893 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-26 17:51:38,917 | INFO | SILVER_VALIDATION | Rows after deduplication: 174762 (dropped 25238)
+2025-12-26 17:51:39,111 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-26 17:51:39,111 | INFO | SILVER_VALIDATION | Final silver row count: 174762
+2025-12-26 17:51:39,111 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-26/nba_player_stats_silver.csv

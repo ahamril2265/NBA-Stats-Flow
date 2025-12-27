@@ -31,4 +31,3 @@ columns:
   - name: snapshot_time_date
     type: date
     nullable: false
-

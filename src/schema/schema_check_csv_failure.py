@@ -21,6 +21,11 @@ TYPE_MAPPING = {
     "date": "datetime64[ns]"
 }
 
+# 🔴 Forced failure flag (testing / validation only)
+FORCE_SCHEMA_FAILURE = os.getenv(
+    "FORCE_SCHEMA_FAILURE", "false"
+).lower() == "true"
+
 
 # ---------------- Schema Registry Utilities ---------------- #
 
@@ -56,7 +61,6 @@ def _classify_schema_change(old: dict, new: dict):
     breaking = []
     compatible = []
 
-    # Removed or modified columns
     for name, old_col in old_cols.items():
         if name not in new_cols:
             breaking.append(f"Column removed: {name}")
@@ -67,7 +71,6 @@ def _classify_schema_change(old: dict, new: dict):
             if old_col.get("nullable", True) and not new_col.get("nullable", True):
                 breaking.append(f"Nullable → non-nullable: {name}")
 
-    # New columns
     for name, new_col in new_cols.items():
         if name not in old_cols:
             if new_col.get("nullable", True):
@@ -118,6 +121,24 @@ def enforce_schema(snapshot_date: str):
     }
 
     try:
+        # ---------- 🔴 Forced Failure Gate ---------- #
+        if FORCE_SCHEMA_FAILURE:
+            error_msg = "Forced schema failure (testing mode enabled)"
+
+            emit_alert(
+                severity="CRITICAL",
+                source="SCHEMA_CHECK",
+                snapshot_date=snapshot_date,
+                message=error_msg,
+                details={"forced": True}
+            )
+
+            metrics["checks_failed"] += 1
+            metrics["status"] = "FAILED"
+            _write_metrics(snapshot_date, metrics)
+
+            raise RuntimeError(error_msg)
+
         # ---------- Phase 2.2: Schema Evolution Gate ---------- #
 
         latest_schema = _load_schema(_latest_schema_path())
@@ -142,7 +163,7 @@ def enforce_schema(snapshot_date: str):
         if compatible:
             new_version = _next_schema_version(latest_schema["version"])
             incoming_schema["version"] = new_version
-            metrics["schema_version"] = new_version  # ✅ fix
+            metrics["schema_version"] = new_version
             _persist_new_schema(incoming_schema, new_version)
 
             emit_alert(
@@ -163,7 +184,6 @@ def enforce_schema(snapshot_date: str):
 
         df = pd.read_csv(silver_csv_path)
 
-        # 1️⃣ Column presence
         expected_columns = [col["name"] for col in incoming_schema["columns"]]
         actual_columns = df.columns.tolist()
 
@@ -177,7 +197,6 @@ def enforce_schema(snapshot_date: str):
         if extra_cols:
             logger.warning(f"Extra columns detected (allowed): {extra_cols}")
 
-        # 2️⃣ Data type enforcement (CSV-aware)
         for col in incoming_schema["columns"]:
             col_name = col["name"]
             expected_type = col["type"]
@@ -200,7 +219,6 @@ def enforce_schema(snapshot_date: str):
 
         metrics["checks_passed"] += 1
 
-        # 3️⃣ Nullability
         non_nullable_cols = [
             col["name"]
             for col in incoming_schema["columns"]

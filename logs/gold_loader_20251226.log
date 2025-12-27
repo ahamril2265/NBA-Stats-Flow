@@ -1,0 +1,20 @@
+2025-12-26 18:07:35,517 | INFO | GOLD_LOADER | START | Gold load for snapshot 2025-12-26
+2025-12-26 18:07:35,571 | INFO | GOLD_LOADER | Rows read from silver: 174762
+2025-12-26 18:10:29,451 | INFO | GOLD_LOADER | START | Gold load for snapshot 2025-12-26
+2025-12-26 18:10:29,483 | INFO | GOLD_LOADER | Rows read from silver: 174762
+2025-12-26 18:11:26,556 | INFO | GOLD_LOADER | START | Gold load for snapshot 2025-12-26
+2025-12-26 18:11:26,598 | INFO | GOLD_LOADER | Rows read from silver: 174762
+2025-12-26 18:14:42,710 | INFO | GOLD_LOADER | START | Gold load for snapshot 2025-12-26
+2025-12-26 18:14:42,748 | INFO | GOLD_LOADER | Rows read from silver: 174762
+2025-12-26 18:17:09,903 | INFO | GOLD_LOADER | START | Gold load for snapshot 2025-12-26
+2025-12-26 18:17:09,989 | INFO | GOLD_LOADER | Rows read from silver: 174762
+2025-12-26 18:17:10,100 | INFO | GOLD_LOADER | Truncating target table for idempotent load
+2025-12-26 18:18:05,188 | INFO | GOLD_LOADER | START | Gold load for snapshot 2025-12-26
+2025-12-26 18:18:05,272 | INFO | GOLD_LOADER | Rows read from silver: 174762
+2025-12-26 18:18:05,382 | INFO | GOLD_LOADER | Truncating target table for idempotent load
+2025-12-26 18:20:47,482 | INFO | GOLD_LOADER | START | Gold load for snapshot 2025-12-26
+2025-12-26 18:20:47,522 | INFO | GOLD_LOADER | Rows read from silver: 174762
+2025-12-26 18:20:47,580 | INFO | GOLD_LOADER | Ensuring Gold table exists
+2025-12-26 18:20:47,588 | INFO | GOLD_LOADER | Truncating target table for idempotent load
+2025-12-26 18:21:08,401 | INFO | GOLD_LOADER | END | Gold load completed
+2025-12-26 18:21:08,402 | INFO | GOLD_LOADER | Rows loaded into Gold: 174762

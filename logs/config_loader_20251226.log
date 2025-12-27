@@ -1,0 +1,78 @@
+2025-12-26 16:47:19,348 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 16:47:19,349 | ERROR | CONFIG_LOADER | Config file not found: config/base.yaml
+2025-12-26 16:47:37,868 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 16:47:37,873 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 16:47:43,978 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 16:47:43,981 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 16:49:10,174 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 16:49:10,179 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:00:28,454 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:00:28,459 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:07:15,722 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:07:15,726 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:21:14,622 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:21:14,626 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:21:14,627 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:21:14,630 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:21:16,792 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:21:16,794 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:30:39,762 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:30:39,765 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:31:26,579 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:31:26,581 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:31:26,582 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:31:26,584 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:31:35,630 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:31:35,633 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:37:54,169 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:37:54,172 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:38:10,395 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:38:10,400 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:45:37,344 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:45:37,348 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:45:46,377 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:45:46,382 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:50:00,458 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:50:00,461 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:50:04,529 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:50:04,532 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:50:08,441 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:50:08,444 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:50:13,766 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:50:13,769 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:50:51,455 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:50:51,460 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:50:56,013 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:50:56,016 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:51:38,681 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:51:38,684 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:51:43,096 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:51:43,099 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:53:58,061 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:53:58,064 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:59:01,957 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:59:01,960 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 17:59:22,284 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 17:59:22,287 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:01:26,186 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:01:26,190 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:01:28,001 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:01:28,003 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:01:41,636 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:01:41,638 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:01:43,419 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:01:43,420 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:07:35,512 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:07:35,516 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:10:29,448 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:10:29,450 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:11:26,553 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:11:26,556 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:14:42,705 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:14:42,710 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:17:09,898 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:17:09,903 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:18:05,184 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:18:05,188 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-26 18:20:47,479 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-26 18:20:47,482 | INFO | CONFIG_LOADER | END | Configuration loaded successfully

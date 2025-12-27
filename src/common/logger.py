@@ -1,24 +1,19 @@
 import logging
 import os
-from datetime import datetime
-
 
 LOG_DIR = "logs"
-LOG_LEVEL = logging.INFO
+os.makedirs(LOG_DIR, exist_ok=True)
+
+LOG_FILE = os.path.join(LOG_DIR, "pipeline.log")
 
 
 def get_logger(name: str) -> logging.Logger:
-    """
-    Create and return a logger with both console and file handlers.
-    Ensures no duplicate handlers are added.
-    """
-    os.makedirs(LOG_DIR, exist_ok=True)
-
     logger = logging.getLogger(name)
-    logger.setLevel(LOG_LEVEL)
 
     if logger.handlers:
-        return logger
+        return logger  # prevent duplicate handlers
+
+    logger.setLevel(logging.INFO)
 
     formatter = logging.Formatter(
         "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
@@ -29,10 +24,7 @@ def get_logger(name: str) -> logging.Logger:
     console_handler.setFormatter(formatter)
 
     # File handler
-    log_file = os.path.join(
-        LOG_DIR, f"{name.lower()}_{datetime.now().strftime('%Y%m%d')}.log"
-    )
-    file_handler = logging.FileHandler(log_file)
+    file_handler = logging.FileHandler(LOG_FILE)
     file_handler.setFormatter(formatter)
 
     logger.addHandler(console_handler)

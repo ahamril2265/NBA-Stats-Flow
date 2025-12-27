@@ -1,0 +1,6 @@
+2025-12-26 16:49:10,179 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-26
+2025-12-26 16:49:10,671 | INFO | DATA_GENERATOR | END | Generated 100000 records
+2025-12-26 16:49:10,671 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-26/nba_player_stats.csv
+2025-12-26 17:30:39,766 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-26
+2025-12-26 17:30:40,411 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-26 17:30:40,412 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-26/nba_player_stats.csv

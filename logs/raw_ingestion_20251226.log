@@ -1,0 +1,34 @@
+2025-12-26 17:00:28,459 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-26
+2025-12-26 17:00:28,555 | INFO | RAW_INGESTION | Rows read from raw CSV: 100000
+2025-12-26 17:00:28,716 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-26 17:00:28,716 | INFO | RAW_INGESTION | Rows written to bronze: 100000
+2025-12-26 17:00:28,716 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-26/nba_player_stats_bronze.csv
+2025-12-26 17:07:15,726 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-26
+2025-12-26 17:07:15,819 | INFO | RAW_INGESTION | Rows read from raw CSV: 100000
+2025-12-26 17:07:15,911 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-26 17:07:15,911 | INFO | RAW_INGESTION | Rows written to bronze parquet: 100000
+2025-12-26 17:07:15,911 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-26/nba_player_stats_bronze.parquet
+2025-12-26 17:21:14,627 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-26
+2025-12-26 17:21:14,630 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-26
+2025-12-26 17:21:14,719 | INFO | RAW_INGESTION | Rows read from raw CSV: 100000
+2025-12-26 17:21:14,892 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-26 17:21:14,892 | INFO | RAW_INGESTION | Rows written to bronze: 100000
+2025-12-26 17:21:14,892 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-26/nba_player_stats_bronze.csv
+2025-12-26 17:21:16,794 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-26
+2025-12-26 17:21:16,794 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-26
+2025-12-26 17:21:16,869 | INFO | RAW_INGESTION | Rows read from raw CSV: 100000
+2025-12-26 17:21:16,930 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-26 17:21:16,930 | INFO | RAW_INGESTION | Rows written to bronze parquet: 100000
+2025-12-26 17:21:16,930 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-26/nba_player_stats_bronze.parquet
+2025-12-26 17:31:26,582 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-26
+2025-12-26 17:31:26,584 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-26
+2025-12-26 17:31:26,711 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-26 17:31:27,131 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-26 17:31:27,131 | INFO | RAW_INGESTION | Rows written to bronze: 200000
+2025-12-26 17:31:27,131 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-26/nba_player_stats_bronze.csv
+2025-12-26 17:31:35,633 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-26
+2025-12-26 17:31:35,633 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-26
+2025-12-26 17:31:35,802 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-26 17:31:35,917 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-26 17:31:35,917 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-26 17:31:35,917 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-26/nba_player_stats_bronze.parquet

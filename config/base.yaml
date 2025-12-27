@@ -19,3 +19,11 @@ database:
 pipeline:
   retries: 2
   retry_delay_minutes: 5
+
+data_quality:
+  row_count_drift_pct: 30
+  null_threshold_pct: 5
+  critical_columns:
+    - player_id
+    - points
+    - season

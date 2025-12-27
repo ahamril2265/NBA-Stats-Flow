@@ -1,114 +1,147 @@
-This is a solid architectural foundation for a Data Engineering project. I have cleaned up the formatting, improved the visual hierarchy using Markdown best practices, and ensured the technical descriptions are concise and professional.
-
-# NBA Player Statistics ETL Pipeline (V1)
+# NBA Player Statistics ETL Pipeline — V2
 
 ## Overview
 
-This project implements a **production-style end-to-end Data Engineering pipeline** for NBA player statistics. It is designed to reflect real-world industry workflows by prioritizing layered data quality and schema enforcement over "toy" scripts.
+This project is a **production-style Data Engineering pipeline** that ingests NBA player statistics, enforces schema and data quality contracts, and loads analytics-ready data into PostgreSQL with **strong operational guarantees**.
 
-The pipeline ingests synthetic data and delivers **analytics-ready Gold data** into PostgreSQL with guarantees around **correctness, idempotency, and observability**.
-
-> **V1 Focus:** Correctness > Reliability > Clarity.
-> *Advanced optimizations (upserts, alerts, indexing) are intentionally deferred to V2.*
+**V2 focuses on correctness, observability, and on-call readiness**, moving beyond simple ETL into a system that can be trusted in real-world environments. The pipeline is **fail-fast**, **idempotent**, **schema-aware**, and **fully observable** through logs, metrics, and alerts.
 
 ---
 
-## High-Level Architecture
+## Architecture (V2)
 
-The pipeline follows a **Medallion Architecture** (Raw → Bronze → Silver → Gold) to ensure data lineage and quality at every stage.
+The pipeline follows a refined Medallion architecture with integrated quality and schema gates.
 
-### Data Layers & Workflow
+### Key V2 Capabilities
 
-| Layer | Format | Purpose | Key Operations |
-| --- | --- | --- | --- |
-| **Raw** | CSV | Ingestion Source | Synthetic snapshots partitioned by `snapshot_date`. |
-| **Bronze** | Parquet | Source of Truth | Raw data preserved as-is; adds `ingested_at` metadata. |
-| **Silver** | Parquet/CSV | Validated & Clean | Deduplication, null handling, and type enforcement. |
-| **Schema Gate** | JSONL | Quality Control | Validates against `schema_v1.yaml`; emits metrics. |
-| **Gold** | PostgreSQL | Analytics Ready | Idempotent load into `analytics.nba_player_stats`. |
+* **✅ End-to-End Pipeline:** Automated flow from Raw (CSV) → Bronze (Parquet) → Silver (Cleaned) → Gold (PostgreSQL).
+* **✅ Schema Enforcement:** Versioned schema registry with backward-compatibility checks and breaking change detection.
+* **✅ Data Quality Gates:** Threshold-based failure handling for row count drift and null percentage spikes.
+* **✅ Observability:** Unified logging (Console + File) and structured alerts with severity levels (**INFO**, **WARN**, **CRITICAL**).
+* **✅ Operational Safety:** Exactly-once semantics via processed snapshot tracking and idempotent Gold loads.
 
 ---
 
-## Data Layers Explained
-
-### 1. Raw Layer (CSV)
-
-Represents external source data.
-
-* **Storage:** `data/raw/snapshot_date=YYYY-MM-DD/`
-* **Validation:** None. This is a 1:1 capture of the source.
-
-### 2. Bronze Layer (Parquet)
-
-The "immutable" source of truth for the internal pipeline.
-
-* **Design Principle:** Bronze preserves truth, not cleanliness.
-* **Optimization:** Converted to Parquet for efficient downstream reads.
-
-### 3. Silver Layer (Validation & Cleaning)
-
-Enforces structural correctness:
-
-* Drops rows with nulls in critical fields (e.g., Player Name, Team).
-* Deduplicates records within the snapshot.
-* Outputs both **Parquet** (authoritative) and **CSV** (for debugging/portability).
-
-### 4. Schema Enforcement (v1)
-
-A strict gate ensuring Silver data matches the defined contract.
-
-* **Checks:** Column presence, data types, and non-null constraints.
-* **Observability:** Emits append-only metrics to `metrics/schema/schema_metrics.jsonl`.
-* **Fail-Fast:** Prevents corrupted data from ever reaching the Gold database.
-
-### 5. Gold Layer (PostgreSQL)
-
-The final destination for BI and analytics.
-
-* **Idempotency:** Uses a **TRUNCATE + INSERT** pattern to ensure runs can be retried without duplicating data.
-* **Metadata:** Records are tagged with `schema_version` and `snapshot_time_date`.
-
----
-
-## Tech Stack
+## Technology Stack
 
 * **Language:** Python, SQL
-* **Storage:** Local filesystem (S3-ready layout)
-* **File Formats:** CSV, Parquet (via PyArrow)
-* **Database:** PostgreSQL (SQLAlchemy / Psycopg2)
-* **Libraries:** Pandas, PyArrow
+* **Storage:** Local filesystem (CSV, Parquet)
+* **Database:** PostgreSQL
+* **Orchestration:** Bash (V2), Airflow-ready Python entry points
+* **Observability:** Python logging, YAML-based config, and JSONL metrics
 
 ---
 
-## Engineering Principles Demonstrated
+## Project Structure
 
-* **Idempotent Processing:** Jobs can be re-run safely.
-* **Schema-First Design:** Data contracts are defined before loading.
-* **Separation of Concerns:** Configuration and secrets are decoupled from logic.
-* **Partition-Awareness:** Data is organized by date to support future backfills.
+```text
+nba-player-etl/
+├── src/
+│   ├── generator/      # Synthetic data generation
+│   ├── ingestion/      # Bronze ingestion (Parquet conversion)
+│   ├── processing/     # Silver transformations (Cleaning)
+│   ├── schema/         # Schema enforcement (CSV + Parquet)
+│   ├── quality/        # Data quality checks
+│   ├── loader/         # Gold loader (PostgreSQL)
+│   ├── alerts/         # Structured alert manager
+│   └── common/         # Logger, config loader
+├── schema_registry/    # Versioned YAML schemas
+├── metrics/            # Schema + quality metrics (JSONL)
+├── logs/               # Unified pipeline logs
+├── config/             # base.yaml, environment configs
+├── run_pipeline.sh     # End-to-end orchestration script
+└── README.md
+
+```
 
 ---
 
-## Execution Guide (V1)
+## Execution (V2)
 
-Run the pipeline in sequence:
+### 1. Grant Permissions
 
-1. **Generate Data:** `python3 -m src.generator.generate_csv`
-2. **Ingest to Bronze:** `python3 -m src.ingestion.ingest_raw`
-3. **Validate (Silver):** `python3 -m src.validation.validate_clean`
-4. **Schema Check:** `python3 -m src.schema.schema_check`
-5. **Load to Gold:** `python3 -m src.loader.load_postgres`
+```bash
+chmod +x run_pipeline.sh
+
+```
+
+### 2. Run the Full Pipeline
+
+```bash
+./run_pipeline.sh
+
+```
+
+> **Note:** The pipeline is designed to stop immediately on any failure to prevent downstream data corruption.
 
 ---
 
-## V2 Roadmap
+## Failure & Alerting Model
 
-* Transition from Truncate-Load to **Incremental Upserts (MERGE)**.
-* Implementation of **Great Expectations** for advanced data quality thresholds.
-* Full **Airflow DAG** orchestration.
-* Database indexing and query optimization for the Gold layer.
+### Alert Severity Levels
+
+| Severity | Meaning |
+| --- | --- |
+| **INFO** | Successful execution or expected skip (e.g., snapshot already processed). |
+| **WARN** | Minor drift detected; pipeline continues but requires review. |
+| **CRITICAL** | **Pipeline stopped.** Immediate manual intervention required. |
+
+### Failure Scenarios
+
+* **Breaking Schema Change:** Triggers **CRITICAL** alert and halts the process.
+* **Quality Threshold Breach:** (e.g., >5% nulls) Triggers **CRITICAL** alert and halts the process.
+* **Gold Load Failure:** Database connection or constraint errors trigger a rollback and **CRITICAL** alert.
+
+---
+
+## Metrics & Logs
+
+* **Unified Logs:** Found in `logs/pipeline.log`.
+* **Schema Metrics:** Tracked in `metrics/schema/` (Append-only JSONL).
+* **Quality Metrics:** Tracked in `metrics/data_quality/` (Snapshot-partitioned).
+
+---
+
+## Idempotency & Incremental Loads
+
+Each snapshot is processed **exactly once**.
+
+1. Processed snapshots are tracked in a `metadata.processed_logs` table in PostgreSQL.
+2. If the pipeline is re-run for a previously successful day, the Gold load is skipped.
+3. The system emits an **INFO** alert and terminates gracefully to avoid duplicate records.
+
+---
+
+## Testing & Validation
+
+To validate the alerting and fail-fast mechanism, you can force a failure:
+
+```bash
+export FORCE_SCHEMA_FAILURE=true
+./run_pipeline.sh
+
+```
+
+**Expected Result:**
+
+* Pipeline exits with non-zero status.
+* `logs/pipeline.log` contains a **CRITICAL** alert.
+* Metrics are marked as `FAILED`.
+
+*To reset:* `unset FORCE_SCHEMA_FAILURE`
+
+---
+
+## V3 Roadmap (Planned)
+
+* **Airflow Orchestration:** Transition from Bash to full DAG-based scheduling.
+* **Advanced Drift Detection:** Implementation of PSI (Population Stability Index).
+* **Backfill Automation:** Automated CLI for re-processing historical ranges.
+
+---
 
 **Author:** ARM
 
-*Focus: Production-style Data Engineering systems*
+*Focus: Production-style Data Engineering systems.*
 
+---

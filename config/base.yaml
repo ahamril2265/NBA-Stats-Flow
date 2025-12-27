@@ -1,0 +1,21 @@
+project:
+  name: nba-player-etl
+  version: v1
+
+data:
+  snapshot_column: snapshot_time_date
+  min_rows_expected: 200000
+
+storage:
+  s3:
+    raw_path: s3://nba-etl/raw/
+    silver_path: s3://nba-etl/silver/
+
+database:
+  type: postgres
+  schema: analytics
+  table: nba_player_stats
+
+pipeline:
+  retries: 2
+  retry_delay_minutes: 5

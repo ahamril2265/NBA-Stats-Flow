@@ -1,0 +1,7 @@
+pandas
+pyyaml
+psycopg2-binary
+sqlalchemy
+apache-airflow
+boto3
+pyarrow

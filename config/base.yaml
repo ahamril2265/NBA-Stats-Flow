@@ -27,3 +27,24 @@ data_quality:
     - player_id
     - points
     - season
+
+drift_detection:
+  enabled: true
+  baseline_window: 7
+
+  numeric_columns:
+    - points
+    - assists
+    - rebounds
+
+  categorical_columns:
+    - team
+    - season
+
+  thresholds:
+    numeric:
+      info_pct: 10
+      warn_pct: 30
+    categorical:
+      cardinality_warn_pct: 10
+      cardinality_critical_pct: 30

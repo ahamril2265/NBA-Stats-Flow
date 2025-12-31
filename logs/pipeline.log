@@ -137,3 +137,482 @@
 2025-12-27 04:46:29,798 | INFO | GOLD_LOADER | Rows read from silver: 174642
 2025-12-27 04:46:29,891 | INFO | GOLD_LOADER | Ensuring Gold tables exist
 2025-12-27 04:46:29,893 | INFO | ALERT_MANAGER | ALERT | {"severity": "INFO", "source": "GOLD_LOADER", "snapshot_date": "2025-12-27", "message": "Snapshot already processed \u2014 skipping Gold load", "details": {}, "timestamp": "2025-12-27T12:46:29.893717"}
+2025-12-29 23:27:11,342 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-29 23:27:11,346 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-29 23:27:11,346 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-29
+2025-12-29 23:27:11,986 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-29 23:27:11,986 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-29/nba_player_stats.csv
+2025-12-29 23:27:12,289 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-29 23:27:12,290 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-29 23:27:12,290 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-29
+2025-12-29 23:27:12,290 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-29
+2025-12-29 23:27:12,373 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-29 23:27:12,448 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-29 23:27:12,449 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-29 23:27:12,449 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-29/nba_player_stats_bronze.parquet
+2025-12-29 23:27:12,744 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-29 23:27:12,745 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-29 23:27:12,745 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-29
+2025-12-29 23:27:12,788 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-29 23:27:12,822 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-29 23:27:12,851 | INFO | SILVER_VALIDATION | Rows after deduplication: 174871 (dropped 25129)
+2025-12-29 23:27:12,892 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-29 23:27:12,893 | INFO | SILVER_VALIDATION | Final silver row count: 174871
+2025-12-29 23:27:12,893 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-29/nba_player_stats_silver.parquet
+2025-12-29 23:27:13,193 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-29 23:27:13,194 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-29 23:27:13,194 | INFO | SCHEMA_CHECK | START | Schema enforcement for snapshot 2025-12-29
+2025-12-29 23:27:13,240 | INFO | SCHEMA_CHECK | END | Schema enforcement passed successfully
+2025-12-29 23:27:13,548 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-29 23:27:13,549 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-29 23:27:13,549 | INFO | DATA_QUALITY | START | Data quality check for 2025-12-29
+2025-12-29 23:27:13,583 | INFO | DATA_QUALITY | END | Data quality check completed with status PASSED
+2025-12-29 23:27:13,993 | INFO | GOLD_LOADER | START | Incremental Gold load for snapshot 2025-12-29
+2025-12-29 23:27:14,015 | INFO | GOLD_LOADER | Rows read from silver: 174871
+2025-12-29 23:27:14,106 | INFO | GOLD_LOADER | Ensuring Gold tables exist
+2025-12-29 23:27:44,365 | INFO | ALERT_MANAGER | ALERT | {"severity": "INFO", "source": "GOLD_LOADER", "snapshot_date": "2025-12-29", "message": "Gold load completed successfully", "details": {"rows_loaded": 174871, "schema_version": "v1"}, "timestamp": "2025-12-30T07:27:44.365393"}
+2025-12-29 23:27:44,365 | INFO | GOLD_LOADER | END | Incremental Gold load completed for 2025-12-29
+2025-12-29 23:55:23,372 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-29 23:55:23,377 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-29 23:57:03,013 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-29 23:57:03,016 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:49:48,092 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:49:48,098 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:52:40,076 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:52:40,080 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:52:40,080 | INFO | DRIFT_PROFILER | START | Drift profiling for snapshot 2025-12-30
+2025-12-30 06:53:38,121 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:53:38,127 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:53:38,127 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-30
+2025-12-30 06:53:39,144 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-30 06:53:39,145 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-30/nba_player_stats.csv
+2025-12-30 06:53:39,605 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:53:39,609 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:53:39,609 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-30
+2025-12-30 06:53:39,609 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-30
+2025-12-30 06:53:39,760 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-30 06:53:39,899 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-30 06:53:39,900 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-30 06:53:39,900 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-30/nba_player_stats_bronze.parquet
+2025-12-30 06:53:40,377 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:53:40,381 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:53:40,381 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-30
+2025-12-30 06:53:40,470 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-30 06:53:40,535 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-30 06:53:40,592 | INFO | SILVER_VALIDATION | Rows after deduplication: 174617 (dropped 25383)
+2025-12-30 06:53:40,674 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-30 06:53:40,674 | INFO | SILVER_VALIDATION | Final silver row count: 174617
+2025-12-30 06:53:40,675 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-30/nba_player_stats_silver.parquet
+2025-12-30 06:53:41,195 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:53:41,198 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:53:41,198 | INFO | SCHEMA_CHECK | START | Schema enforcement for snapshot 2025-12-30
+2025-12-30 06:53:41,278 | INFO | SCHEMA_CHECK | END | Schema enforcement passed successfully
+2025-12-30 06:53:41,779 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:53:41,783 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:53:41,783 | INFO | DATA_QUALITY | START | Data quality check for 2025-12-30
+2025-12-30 06:53:41,836 | INFO | DATA_QUALITY | END | Data quality check completed with status PASSED
+2025-12-30 06:53:42,559 | INFO | GOLD_LOADER | START | Incremental Gold load for snapshot 2025-12-30
+2025-12-30 06:53:42,606 | INFO | GOLD_LOADER | Rows read from silver: 174617
+2025-12-30 06:53:42,752 | INFO | GOLD_LOADER | Ensuring Gold tables exist
+2025-12-30 06:54:28,134 | INFO | ALERT_MANAGER | ALERT | {"severity": "INFO", "source": "GOLD_LOADER", "snapshot_date": "2025-12-30", "message": "Gold load completed successfully", "details": {"rows_loaded": 174617, "schema_version": "v1"}, "timestamp": "2025-12-30T14:54:28.134439"}
+2025-12-30 06:54:28,134 | INFO | GOLD_LOADER | END | Incremental Gold load completed for 2025-12-30
+2025-12-30 06:54:34,885 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:54:34,889 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:54:34,889 | INFO | DRIFT_PROFILER | START | Drift profiling for snapshot 2025-12-30
+2025-12-30 06:54:34,974 | INFO | DRIFT_PROFILER | Profiled numeric column: points
+2025-12-30 06:54:34,990 | INFO | DRIFT_PROFILER | Profiled numeric column: assists
+2025-12-30 06:54:35,006 | INFO | DRIFT_PROFILER | Profiled numeric column: rebounds
+2025-12-30 06:54:35,031 | INFO | DRIFT_PROFILER | Profiled categorical column: team
+2025-12-30 06:54:35,052 | INFO | DRIFT_PROFILER | Profiled categorical column: season
+2025-12-30 06:54:35,054 | INFO | DRIFT_PROFILER | END | Drift profiling completed (records_written=5)
+2025-12-30 06:55:12,387 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:55:12,390 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:55:51,670 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:55:51,674 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:55:51,674 | INFO | DRIFT_BASELINE | START | Baseline build for snapshot 2025-12-30 (window=7)
+2025-12-30 06:55:51,674 | INFO | DRIFT_BASELINE | No historical snapshots available — bootstrap mode
+2025-12-30 06:57:47,285 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:57:47,289 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:58:13,793 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-30 06:58:13,799 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-30 06:58:13,799 | INFO | DRIFT_DETECTOR | START | Drift detection for snapshot 2025-12-30
+2025-12-30 06:58:13,799 | INFO | DRIFT_DETECTOR | Baseline not available — bootstrap mode
+2025-12-31 07:07:13,486 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:07:13,490 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:07:13,491 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:07:13,492 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:07:13,494 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:07:13,494 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:07:13,543 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:07:13,546 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:07:13,546 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:07:13,557 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:07:13,559 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:07:13,559 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:07:14,107 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:07:14,107 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:07:14,107 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:07:14,107 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:07:14,165 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:07:14,165 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:07:14,169 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:07:14,169 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:08:40,503 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:08:40,505 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:08:40,506 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:08:41,101 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:08:41,101 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:15:34,164 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:15:34,167 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:15:34,167 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:15:34,742 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:15:34,742 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:15:36,186 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:15:36,188 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:15:36,188 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:15:36,188 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:15:36,290 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-31 07:15:36,388 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-31 07:15:36,388 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-31 07:15:36,388 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-31/nba_player_stats_bronze.parquet
+2025-12-31 07:17:29,990 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:17:29,992 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:17:29,992 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:17:30,575 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:17:30,575 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:17:31,845 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:17:31,847 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:17:31,847 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:17:31,847 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:17:31,972 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-31 07:17:32,045 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-31 07:17:32,045 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-31 07:17:32,045 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-31/nba_player_stats_bronze.parquet
+2025-12-31 07:18:14,140 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:18:14,143 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:18:14,143 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:18:14,143 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:18:14,253 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-31 07:18:14,316 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-31 07:18:14,316 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-31 07:18:14,316 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-31/nba_player_stats_bronze.parquet
+2025-12-31 07:18:14,686 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:18:14,688 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:18:14,688 | INFO | SCHEMA_CHECK | START | Schema enforcement for snapshot 2025-12-31
+2025-12-31 07:18:14,690 | ERROR | ALERT_MANAGER | ALERT | {"severity": "CRITICAL", "source": "SCHEMA_CHECK", "snapshot_date": "2025-12-31", "message": "Schema enforcement failed (Parquet)", "details": {"error": "Missing silver Parquet data"}, "timestamp": "2025-12-31T15:18:14.690595"}
+2025-12-31 07:18:15,045 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:18:15,048 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:18:15,048 | INFO | DATA_QUALITY | START | Data quality check for 2025-12-31
+2025-12-31 07:19:00,691 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:19:00,694 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:19:00,694 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:19:01,268 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:19:01,268 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:19:13,589 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:19:13,591 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:19:13,592 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:19:13,592 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:19:13,705 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-31 07:19:13,766 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-31 07:19:13,766 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-31 07:19:13,766 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-31/nba_player_stats_bronze.parquet
+2025-12-31 07:19:14,120 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:19:14,122 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:19:14,122 | INFO | SCHEMA_CHECK | START | Schema enforcement for snapshot 2025-12-31
+2025-12-31 07:19:14,124 | ERROR | ALERT_MANAGER | ALERT | {"severity": "CRITICAL", "source": "SCHEMA_CHECK", "snapshot_date": "2025-12-31", "message": "Schema enforcement failed (Parquet)", "details": {"error": "Missing silver Parquet data"}, "timestamp": "2025-12-31T15:19:14.123993"}
+2025-12-31 07:19:14,466 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:19:14,469 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:19:14,469 | INFO | DATA_QUALITY | START | Data quality check for 2025-12-31
+2025-12-31 07:20:04,933 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:20:04,935 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:20:04,936 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-31
+2025-12-31 07:20:04,995 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-31 07:20:05,033 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-31 07:20:05,070 | INFO | SILVER_VALIDATION | Rows after deduplication: 174835 (dropped 25165)
+2025-12-31 07:20:05,116 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-31 07:20:05,116 | INFO | SILVER_VALIDATION | Final silver row count: 174835
+2025-12-31 07:20:05,116 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-31/nba_player_stats_silver.parquet
+2025-12-31 07:20:11,581 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:20:11,583 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:20:11,583 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:20:11,583 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:20:11,693 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-31 07:20:11,755 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-31 07:20:11,755 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-31 07:20:11,755 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-31/nba_player_stats_bronze.parquet
+2025-12-31 07:20:12,113 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:20:12,115 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:20:12,115 | INFO | SCHEMA_CHECK | START | Schema enforcement for snapshot 2025-12-31
+2025-12-31 07:20:12,163 | INFO | SCHEMA_CHECK | END | Schema enforcement passed successfully
+2025-12-31 07:20:12,517 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:20:12,519 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:20:12,519 | INFO | DATA_QUALITY | START | Data quality check for 2025-12-31
+2025-12-31 07:20:12,552 | INFO | DATA_QUALITY | END | Data quality check completed with status PASSED
+2025-12-31 07:21:38,616 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:21:38,618 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:21:38,618 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:21:39,186 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:21:39,187 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:21:39,789 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:21:39,791 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:21:39,791 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:21:39,824 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:21:39,826 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:21:39,826 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:21:39,874 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:21:39,874 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:21:39,876 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:21:39,876 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:21:39,876 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:21:39,876 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:21:39,876 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:21:39,987 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-31 07:21:40,053 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-31 07:21:40,054 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-31 07:21:40,054 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-31/nba_player_stats_bronze.parquet
+2025-12-31 07:21:40,383 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:21:40,383 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:21:40,411 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:21:40,411 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:21:40,458 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:21:40,458 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:21:41,076 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:21:41,078 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:21:41,078 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:21:41,078 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:21:41,084 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:21:41,086 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:21:41,086 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:21:41,086 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:21:41,096 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:21:41,100 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:21:41,100 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:21:41,100 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:21:41,209 | INFO | RAW_INGESTION | Rows read from raw CSV: 200007
+2025-12-31 07:21:41,218 | INFO | RAW_INGESTION | Rows read from raw CSV: 200007
+2025-12-31 07:21:41,241 | INFO | RAW_INGESTION | Rows read from raw CSV: 200007
+2025-12-31 07:23:41,375 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:23:41,378 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:23:41,378 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:23:41,946 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:23:41,947 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:23:43,441 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:23:43,443 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:23:43,443 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:23:43,444 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:23:43,554 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-31 07:23:43,627 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-31 07:23:43,627 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-31 07:23:43,627 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-31/nba_player_stats_bronze.parquet
+2025-12-31 07:23:44,463 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:23:44,465 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:23:44,465 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-31
+2025-12-31 07:23:44,497 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-31 07:23:44,534 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-31 07:23:44,571 | INFO | SILVER_VALIDATION | Rows after deduplication: 174719 (dropped 25281)
+2025-12-31 07:23:44,620 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-31 07:23:44,620 | INFO | SILVER_VALIDATION | Final silver row count: 174719
+2025-12-31 07:23:44,620 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-31/nba_player_stats_silver.parquet
+2025-12-31 07:23:45,492 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:23:45,494 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:23:45,494 | INFO | SCHEMA_CHECK | START | Schema enforcement for snapshot 2025-12-31
+2025-12-31 07:23:45,546 | INFO | SCHEMA_CHECK | END | Schema enforcement passed successfully
+2025-12-31 07:23:46,530 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:23:46,533 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:23:46,533 | INFO | DATA_QUALITY | START | Data quality check for 2025-12-31
+2025-12-31 07:23:46,564 | INFO | DATA_QUALITY | END | Data quality check completed with status PASSED
+2025-12-31 07:23:47,592 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:23:47,594 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:23:47,594 | INFO | DRIFT_PROFILER | START | Drift profiling for snapshot 2025-12-31
+2025-12-31 07:23:47,645 | INFO | DRIFT_PROFILER | Profiled numeric column: points
+2025-12-31 07:23:47,654 | INFO | DRIFT_PROFILER | Profiled numeric column: assists
+2025-12-31 07:23:47,662 | INFO | DRIFT_PROFILER | Profiled numeric column: rebounds
+2025-12-31 07:23:47,676 | INFO | DRIFT_PROFILER | Profiled categorical column: team
+2025-12-31 07:23:47,688 | INFO | DRIFT_PROFILER | Profiled categorical column: season
+2025-12-31 07:23:47,688 | INFO | DRIFT_PROFILER | END | Drift profiling completed (records_written=5)
+2025-12-31 07:23:47,927 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:23:47,929 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:23:47,929 | INFO | DRIFT_BASELINE | START | Baseline build for snapshot 2025-12-31 (window=7)
+2025-12-31 07:23:47,930 | INFO | DRIFT_BASELINE | Baseline built for column: points
+2025-12-31 07:23:47,930 | INFO | DRIFT_BASELINE | Baseline built for column: assists
+2025-12-31 07:23:47,930 | INFO | DRIFT_BASELINE | Baseline built for column: rebounds
+2025-12-31 07:23:47,930 | INFO | DRIFT_BASELINE | Baseline built for column: team
+2025-12-31 07:23:47,930 | INFO | DRIFT_BASELINE | Baseline built for column: season
+2025-12-31 07:23:47,931 | INFO | DRIFT_BASELINE | END | Baseline build completed (columns=5)
+2025-12-31 07:23:48,394 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:23:48,397 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:23:48,397 | INFO | DRIFT_DETECTOR | START | Drift detection for snapshot 2025-12-31
+2025-12-31 07:23:48,397 | INFO | DRIFT_DETECTOR | END | Drift detection completed (records=26)
+2025-12-31 07:23:49,785 | INFO | GOLD_LOADER | START | Incremental Gold load for snapshot 2025-12-31
+2025-12-31 07:23:49,817 | INFO | GOLD_LOADER | Rows read from silver: 174719
+2025-12-31 07:23:49,922 | INFO | GOLD_LOADER | Ensuring Gold tables exist
+2025-12-31 07:24:18,129 | INFO | ALERT_MANAGER | ALERT | {"severity": "INFO", "source": "GOLD_LOADER", "snapshot_date": "2025-12-31", "message": "Gold load completed successfully", "details": {"rows_loaded": 174719, "schema_version": "v1"}, "timestamp": "2025-12-31T15:24:18.129185"}
+2025-12-31 07:24:18,129 | INFO | GOLD_LOADER | END | Incremental Gold load completed for 2025-12-31
+2025-12-31 07:26:20,843 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:20,845 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:20,845 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:26:21,392 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:26:21,392 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:26:22,621 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:22,623 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:22,623 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:26:22,623 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:26:22,716 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-31 07:26:22,776 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-31 07:26:22,776 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-31 07:26:22,776 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-31/nba_player_stats_bronze.parquet
+2025-12-31 07:26:23,666 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:23,669 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:23,669 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-31
+2025-12-31 07:26:23,703 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-31 07:26:23,740 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-31 07:26:23,779 | INFO | SILVER_VALIDATION | Rows after deduplication: 174785 (dropped 25215)
+2025-12-31 07:26:23,825 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-31 07:26:23,825 | INFO | SILVER_VALIDATION | Final silver row count: 174785
+2025-12-31 07:26:23,825 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-31/nba_player_stats_silver.parquet
+2025-12-31 07:26:24,720 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:24,722 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:24,722 | INFO | SCHEMA_CHECK | START | Schema enforcement for snapshot 2025-12-31
+2025-12-31 07:26:24,766 | INFO | SCHEMA_CHECK | END | Schema enforcement passed successfully
+2025-12-31 07:26:25,789 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:25,791 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:25,792 | INFO | DATA_QUALITY | START | Data quality check for 2025-12-31
+2025-12-31 07:26:25,821 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:25,824 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:25,824 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:26:25,835 | INFO | DATA_QUALITY | END | Data quality check completed with status PASSED
+2025-12-31 07:26:26,393 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:26:26,394 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:26:26,757 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:26,759 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:26,759 | INFO | DRIFT_PROFILER | START | Drift profiling for snapshot 2025-12-31
+2025-12-31 07:26:26,795 | INFO | DRIFT_PROFILER | Profiled numeric column: points
+2025-12-31 07:26:26,804 | INFO | DRIFT_PROFILER | Profiled numeric column: assists
+2025-12-31 07:26:26,813 | INFO | DRIFT_PROFILER | Profiled numeric column: rebounds
+2025-12-31 07:26:26,826 | INFO | DRIFT_PROFILER | Profiled categorical column: team
+2025-12-31 07:26:26,837 | INFO | DRIFT_PROFILER | Profiled categorical column: season
+2025-12-31 07:26:26,838 | INFO | DRIFT_PROFILER | END | Drift profiling completed (records_written=5)
+2025-12-31 07:26:27,616 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:27,624 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:27,624 | INFO | DRIFT_BASELINE | START | Baseline build for snapshot 2025-12-31 (window=7)
+2025-12-31 07:26:27,625 | INFO | DRIFT_BASELINE | Baseline built for column: points
+2025-12-31 07:26:27,626 | INFO | DRIFT_BASELINE | Baseline built for column: assists
+2025-12-31 07:26:27,626 | INFO | DRIFT_BASELINE | Baseline built for column: rebounds
+2025-12-31 07:26:27,627 | INFO | DRIFT_BASELINE | Baseline built for column: team
+2025-12-31 07:26:27,627 | INFO | DRIFT_BASELINE | Baseline built for column: season
+2025-12-31 07:26:27,627 | INFO | DRIFT_BASELINE | END | Baseline build completed (columns=5)
+2025-12-31 07:26:27,843 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:27,845 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:27,845 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:26:27,845 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:26:27,949 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-31 07:26:28,009 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-31 07:26:28,009 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-31 07:26:28,009 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-31/nba_player_stats_bronze.parquet
+2025-12-31 07:26:28,724 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:28,743 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:28,747 | INFO | DRIFT_DETECTOR | START | Drift detection for snapshot 2025-12-31
+2025-12-31 07:26:28,749 | INFO | DRIFT_DETECTOR | END | Drift detection completed (records=52)
+2025-12-31 07:26:28,976 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:28,978 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:28,978 | INFO | DATA_GENERATOR | START | Generating data for snapshot 2025-12-31
+2025-12-31 07:26:29,010 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:29,012 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:29,012 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-31
+2025-12-31 07:26:29,044 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-31 07:26:29,080 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-31 07:26:29,111 | INFO | SILVER_VALIDATION | Rows after deduplication: 174927 (dropped 25073)
+2025-12-31 07:26:29,152 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-31 07:26:29,152 | INFO | SILVER_VALIDATION | Final silver row count: 174927
+2025-12-31 07:26:29,152 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-31/nba_player_stats_silver.parquet
+2025-12-31 07:26:29,493 | INFO | DATA_GENERATOR | END | Generated 200000 records
+2025-12-31 07:26:29,493 | INFO | DATA_GENERATOR | File written to data/raw/snapshot_date=2025-12-31/nba_player_stats.csv
+2025-12-31 07:26:30,210 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:30,211 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:30,211 | INFO | SCHEMA_CHECK | START | Schema enforcement for snapshot 2025-12-31
+2025-12-31 07:26:30,254 | INFO | SCHEMA_CHECK | END | Schema enforcement passed successfully
+2025-12-31 07:26:30,259 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:30,261 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:30,261 | INFO | RAW_INGESTION | No snapshot_date provided. Using latest: 2025-12-31
+2025-12-31 07:26:30,261 | INFO | RAW_INGESTION | START | Raw ingestion for snapshot 2025-12-31
+2025-12-31 07:26:30,278 | INFO | GOLD_LOADER | START | Incremental Gold load for snapshot 2025-12-31
+2025-12-31 07:26:30,303 | INFO | GOLD_LOADER | Rows read from silver: 174927
+2025-12-31 07:26:30,345 | INFO | GOLD_LOADER | Ensuring Gold tables exist
+2025-12-31 07:26:30,346 | INFO | ALERT_MANAGER | ALERT | {"severity": "INFO", "source": "GOLD_LOADER", "snapshot_date": "2025-12-31", "message": "Snapshot already processed \u2014 skipping Gold load", "details": {}, "timestamp": "2025-12-31T15:26:30.346898"}
+2025-12-31 07:26:30,367 | INFO | RAW_INGESTION | Rows read from raw CSV: 200000
+2025-12-31 07:26:30,423 | INFO | RAW_INGESTION | END | Bronze ingestion completed
+2025-12-31 07:26:30,423 | INFO | RAW_INGESTION | Rows written to bronze parquet: 200000
+2025-12-31 07:26:30,423 | INFO | RAW_INGESTION | Bronze file path: data/bronze/snapshot_date=2025-12-31/nba_player_stats_bronze.parquet
+2025-12-31 07:26:31,194 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:31,196 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:31,196 | INFO | SILVER_VALIDATION | START | Silver validation for snapshot 2025-12-31
+2025-12-31 07:26:31,210 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:31,213 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:31,213 | INFO | DATA_QUALITY | START | Data quality check for 2025-12-31
+2025-12-31 07:26:31,225 | INFO | SILVER_VALIDATION | Rows read from bronze: 200000
+2025-12-31 07:26:31,244 | INFO | DATA_QUALITY | END | Data quality check completed with status PASSED
+2025-12-31 07:26:31,262 | INFO | SILVER_VALIDATION | Rows after null drop: 200000 (dropped 0)
+2025-12-31 07:26:31,294 | INFO | SILVER_VALIDATION | Rows after deduplication: 174843 (dropped 25157)
+2025-12-31 07:26:31,337 | INFO | SILVER_VALIDATION | END | Silver validation completed
+2025-12-31 07:26:31,338 | INFO | SILVER_VALIDATION | Final silver row count: 174843
+2025-12-31 07:26:31,338 | INFO | SILVER_VALIDATION | Silver file path: data/silver/snapshot_date=2025-12-31/nba_player_stats_silver.parquet
+2025-12-31 07:26:32,607 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:32,609 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:32,609 | INFO | SCHEMA_CHECK | START | Schema enforcement for snapshot 2025-12-31
+2025-12-31 07:26:32,630 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:32,632 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:32,632 | INFO | DRIFT_PROFILER | START | Drift profiling for snapshot 2025-12-31
+2025-12-31 07:26:32,655 | INFO | SCHEMA_CHECK | END | Schema enforcement passed successfully
+2025-12-31 07:26:32,671 | INFO | DRIFT_PROFILER | Profiled numeric column: points
+2025-12-31 07:26:32,680 | INFO | DRIFT_PROFILER | Profiled numeric column: assists
+2025-12-31 07:26:32,687 | INFO | DRIFT_PROFILER | Profiled numeric column: rebounds
+2025-12-31 07:26:32,699 | INFO | DRIFT_PROFILER | Profiled categorical column: team
+2025-12-31 07:26:32,711 | INFO | DRIFT_PROFILER | Profiled categorical column: season
+2025-12-31 07:26:32,711 | INFO | DRIFT_PROFILER | END | Drift profiling completed (records_written=5)
+2025-12-31 07:26:33,446 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:33,458 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:33,459 | INFO | DRIFT_BASELINE | START | Baseline build for snapshot 2025-12-31 (window=7)
+2025-12-31 07:26:33,460 | INFO | DRIFT_BASELINE | Baseline built for column: points
+2025-12-31 07:26:33,460 | INFO | DRIFT_BASELINE | Baseline built for column: assists
+2025-12-31 07:26:33,460 | INFO | DRIFT_BASELINE | Baseline built for column: rebounds
+2025-12-31 07:26:33,461 | INFO | DRIFT_BASELINE | Baseline built for column: team
+2025-12-31 07:26:33,461 | INFO | DRIFT_BASELINE | Baseline built for column: season
+2025-12-31 07:26:33,461 | INFO | DRIFT_BASELINE | END | Baseline build completed (columns=5)
+2025-12-31 07:26:33,669 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:33,671 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:33,671 | INFO | DATA_QUALITY | START | Data quality check for 2025-12-31
+2025-12-31 07:26:33,700 | INFO | DATA_QUALITY | END | Data quality check completed with status PASSED
+2025-12-31 07:26:34,487 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:34,489 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:34,490 | INFO | DRIFT_DETECTOR | START | Drift detection for snapshot 2025-12-31
+2025-12-31 07:26:34,491 | INFO | DRIFT_DETECTOR | END | Drift detection completed (records=78)
+2025-12-31 07:26:34,823 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:34,826 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:34,826 | INFO | DRIFT_PROFILER | START | Drift profiling for snapshot 2025-12-31
+2025-12-31 07:26:34,868 | INFO | DRIFT_PROFILER | Profiled numeric column: points
+2025-12-31 07:26:34,877 | INFO | DRIFT_PROFILER | Profiled numeric column: assists
+2025-12-31 07:26:34,885 | INFO | DRIFT_PROFILER | Profiled numeric column: rebounds
+2025-12-31 07:26:34,898 | INFO | DRIFT_PROFILER | Profiled categorical column: team
+2025-12-31 07:26:34,909 | INFO | DRIFT_PROFILER | Profiled categorical column: season
+2025-12-31 07:26:34,909 | INFO | DRIFT_PROFILER | END | Drift profiling completed (records_written=5)
+2025-12-31 07:26:35,672 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:35,674 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:35,674 | INFO | DRIFT_BASELINE | START | Baseline build for snapshot 2025-12-31 (window=7)
+2025-12-31 07:26:35,674 | INFO | DRIFT_BASELINE | Baseline built for column: points
+2025-12-31 07:26:35,675 | INFO | DRIFT_BASELINE | Baseline built for column: assists
+2025-12-31 07:26:35,675 | INFO | DRIFT_BASELINE | Baseline built for column: rebounds
+2025-12-31 07:26:35,675 | INFO | DRIFT_BASELINE | Baseline built for column: team
+2025-12-31 07:26:35,675 | INFO | DRIFT_BASELINE | Baseline built for column: season
+2025-12-31 07:26:35,675 | INFO | DRIFT_BASELINE | END | Baseline build completed (columns=5)
+2025-12-31 07:26:35,926 | INFO | GOLD_LOADER | START | Incremental Gold load for snapshot 2025-12-31
+2025-12-31 07:26:35,953 | INFO | GOLD_LOADER | Rows read from silver: 174843
+2025-12-31 07:26:35,989 | INFO | GOLD_LOADER | Ensuring Gold tables exist
+2025-12-31 07:26:35,990 | INFO | ALERT_MANAGER | ALERT | {"severity": "INFO", "source": "GOLD_LOADER", "snapshot_date": "2025-12-31", "message": "Snapshot already processed \u2014 skipping Gold load", "details": {}, "timestamp": "2025-12-31T15:26:35.990905"}
+2025-12-31 07:26:36,633 | INFO | CONFIG_LOADER | START | Loading configuration
+2025-12-31 07:26:36,635 | INFO | CONFIG_LOADER | END | Configuration loaded successfully
+2025-12-31 07:26:36,635 | INFO | DRIFT_DETECTOR | START | Drift detection for snapshot 2025-12-31
+2025-12-31 07:26:36,636 | INFO | DRIFT_DETECTOR | END | Drift detection completed (records=104)
+2025-12-31 07:26:38,018 | INFO | GOLD_LOADER | START | Incremental Gold load for snapshot 2025-12-31
+2025-12-31 07:26:38,040 | INFO | GOLD_LOADER | Rows read from silver: 174843
+2025-12-31 07:26:38,072 | INFO | GOLD_LOADER | Ensuring Gold tables exist
+2025-12-31 07:26:38,073 | INFO | ALERT_MANAGER | ALERT | {"severity": "INFO", "source": "GOLD_LOADER", "snapshot_date": "2025-12-31", "message": "Snapshot already processed \u2014 skipping Gold load", "details": {}, "timestamp": "2025-12-31T15:26:38.073818"}

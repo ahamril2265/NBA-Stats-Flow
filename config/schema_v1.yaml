@@ -1,0 +1,34 @@
+version: v1
+columns:
+  - name: player_id
+    type: integer
+    nullable: false
+
+  - name: player_name
+    type: string
+    nullable: false
+
+  - name: team
+    type: string
+    nullable: false
+
+  - name: season
+    type: string
+    nullable: false
+
+  - name: points
+    type: integer
+    nullable: false
+
+  - name: assists
+    type: integer
+    nullable: false
+
+  - name: rebounds
+    type: integer
+    nullable: false
+
+  - name: snapshot_time_date
+    type: date
+    nullable: false
+

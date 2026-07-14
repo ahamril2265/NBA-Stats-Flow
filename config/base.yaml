@@ -1,0 +1,50 @@
+project:
+  name: nba-player-etl
+  version: v1
+
+data:
+  snapshot_column: snapshot_time_date
+  min_rows_expected: 200000
+
+storage:
+  s3:
+    raw_path: s3://nba-etl/raw/
+    silver_path: s3://nba-etl/silver/
+
+database:
+  type: postgres
+  schema: analytics
+  table: nba_player_stats
+
+pipeline:
+  retries: 2
+  retry_delay_minutes: 5
+
+data_quality:
+  row_count_drift_pct: 30
+  null_threshold_pct: 5
+  critical_columns:
+    - player_id
+    - points
+    - season
+
+drift_detection:
+  enabled: true
+  baseline_window: 7
+
+  numeric_columns:
+    - points
+    - assists
+    - rebounds
+
+  categorical_columns:
+    - team
+    - season
+
+  thresholds:
+    numeric:
+      info_pct: 10
+      warn_pct: 30
+    categorical:
+      cardinality_warn_pct: 10
+      cardinality_critical_pct: 30
